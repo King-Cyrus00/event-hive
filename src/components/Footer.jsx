@@ -3,12 +3,12 @@ import { Linkedin, Instagram, Facebook } from "lucide-react";
 
 function Footer() {
     return (
-        <footer className="bg-navy-blue text-white text-3xl ">
-            <h1 className="font-bold flex justify-center"><span className="text-white">Event</span><span className="text-primary">Hive</span></h1>
+        <footer className="bg-navy-blue text-white text-3xl">
+            <h1 className="font-bold flex justify-center gap-2"><span className="text-white">Event</span><span className="text-primary">Hive</span></h1>
             <form className="" >
-                <div className="flex justify-center text-2xl">
-                <input className="" type="email" name="email" placeholder="Enter your mail" />
-                <button  type="submit">Subscribe</button> </div>
+                <div className="flex justify-center text-2xl gap-4 p-4">
+                <input className="bg-white text-primary text-sm w-3xs p-2" type="email" name="email" placeholder="Enter your mail" />
+                <button className="text-2xl bg-primary rounded-lg text-white px-6 py-4" type="submit">Subscribe</button> </div>
                 <div>
                     <span>Home</span>
                     <span>About</span>
