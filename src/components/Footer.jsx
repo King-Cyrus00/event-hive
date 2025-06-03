@@ -8,8 +8,8 @@ function Footer() {
             <form className="" >
                 <div className="flex justify-center text-2xl gap-4 p-4">
                 <input className="bg-white text-primary text-sm w-3xs p-2" type="email" name="email" placeholder="Enter your mail" />
-                <button className="text-2xl bg-primary rounded-lg text-white px-6 py-4" type="submit">Subscribe</button> </div>
-                <div>
+                <button className="text-2xl bg-primary rounded-lg text-white px-6 py-2" type="submit">Subscribe</button> </div>
+                <div className="text-lg text-white flex gap-7 justify-center">
                     <span>Home</span>
                     <span>About</span>
                     <span>Services</span>
@@ -17,13 +17,13 @@ function Footer() {
                     <span>FAQs</span>
                 </div>
                 <hr />
-                <div>
+                <div className="flex p-2 justify-between text-sm align-center">
                     <div>
                         <button>English</button>
                         <button>French</button>
                         <button>Hindi</button>
                     </div>
-                    <div>
+                    <div className="flex text-sm gap-4">
                         <Linkedin/>
                         <Instagram/> 
                         <Facebook/> 
