@@ -2,9 +2,30 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import { Search } from "lucide-react";
 import EventCard from "../components/EventCard";
+import { useState, useEffect } from "react";
+import axios from "axios";
 
 
 export default function Home() {
+    // Declare state variable in React
+    const [events, setEvents] = useState([]);
+
+
+    // Define a function to fetch events from API
+    const getEvents = () => {
+        axios.get('https://fakestoreapi.com/products')
+            .then(response => {
+                setEvents(response.data);
+            })
+            .catch(error => {
+                console.log(error);
+            })
+    }
+
+    // Run fetcher based on side effect   
+    useEffect(getEvents, []);
+
+
     return (
         <>
             <Navbar />
@@ -78,7 +99,14 @@ export default function Home() {
                 </div>
 
                 <div className="grid grid-cols-3 gap-5">
-                    {[1, 2, 3, 4, 5, 6].map(n => <EventCard key={n} />)}
+                    {events.map(item =>{
+                        return(
+                             <EventCard 
+                             key={item.id} 
+                             event={item} />);
+                            }
+                        )
+                    }
                 </div>
             </section>
             <section className="h-[500px]"></section>
