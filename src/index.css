@@ -1,7 +1,18 @@
 @import "tailwindcss";
 
 @theme{
+    /* colors */
     --color-navy-blue: #10107b;
-    --color-primary: #3818D9;
+    --color-primary: #7848F4;
     --color-white: #ffffff;
+    --color-gray:#687C940D ;
+
+    /* typography */
+    --text-bigheading: 36px;
+    --text-heading: 24px;
+    --text-subheading: 18px;
+    --text-body: 16px;
+    --text-paragraph: 12px;
+    --text-label: 10px;
 }
+
